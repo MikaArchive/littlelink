@@ -247,24 +247,26 @@ a:hover {
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Light theme is default above */
 
+/*
 /* Dark theme */
 :root.theme-dark {
-	color-scheme:dark;
+color-scheme:dark;
 }
 :root.theme-dark :focus-visible {
-	outline: 2px solid #4899F7;
-	outline-offset: 2px;
+outline: 2px solid #4899F7;
+outline-offset: 2px;
   }
 :root.theme-dark body {
-	background-color:#121212;
-	color:#ffffff;
+background-color:#121212;
+color:#ffffff;
 }
 :root.theme-dark a:not(.button) {
-	color:#4899F7;
+color:#4899F7;
 }
 :root.theme-dark a:not(.button):hover {
-	color:#7AB8FF;
+color:#7AB8FF;
 }
+*/
 
 /* Auto theme */
 :root.theme-auto {
@@ -379,4 +381,31 @@ ul li {
 	font-weight:800;
 	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.eot');
 	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.eot?#iefix') format('embedded-opentype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff2') format('woff2'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff') format('woff'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.ttf') format('truetype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.svg#OpenSans') format('svg');
+}
+
+/* Custom button colors */
+
+/* Pixiv */
+.button-default[href*="pixiv"] {
+  --button-background: #0096FA;
+  --button-text: #ffffff;
+}
+
+/* SubscribeStar - Gradient */
+.button-default[href*="subscribestar"] {
+  --button-background: linear-gradient(135deg, #ff4081, #009688);
+  --button-text: #ffffff;
+}
+
+/* Unifans */
+.button-default[href*="unifans"] {
+  --button-background: linear-gradient(135deg, #6B5BFF, #9B59B6);
+  --button-text: #ffffff;
+}
+
+/* Boosty */
+.button-default[href*="boosty"] {
+  --button-background: #ffffff;
+  --button-text: #000000;
+  border: 1px solid #ddd;
 }
