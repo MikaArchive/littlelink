@@ -636,8 +636,9 @@
 
 /* Pixiv */
 .button-pixiv {
-  --button-text: #ffffff;
-  --button-background: #0096FA;
+  --button-text: #0096FA;
+  --button-background: #ffffff;
+  --button-border: 1px solid #dddddd;
 }
 
 /* SubscribeStar */
