@@ -631,3 +631,30 @@
 	--button-background:#0B5CFF;
   --button-border:1px solid #FFFFFF;
 }
+
+/* Custom Buttons */
+
+/* Pixiv */
+.button-pixiv {
+  --button-text: #ffffff;
+  --button-background: #0096FA;
+}
+
+/* SubscribeStar */
+.button-subscribestar {
+  --button-text: #ffffff;
+  background-image: linear-gradient(135deg, #ff4081, #009688);
+}
+
+/* Unifans */
+.button-unifans {
+  --button-text: #ffffff;
+  background-image: linear-gradient(135deg, #6B5BFF, #9B59B6);
+}
+
+/* Boosty */
+.button-boosty {
+  --button-text: #000000;
+  --button-background: #ffffff;
+  --button-border: 1px solid #dddddd;
+}
