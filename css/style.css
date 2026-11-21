@@ -1,33 +1,41 @@
 /* Section titles */
 .section-title {
-  font-size: 1.25rem;
+  display: inline-block;
+  font-size: 1.1rem;
   font-weight: 700;
-  margin: 2rem 0 1rem 0;
+  margin: 2rem auto 1rem auto;
+  padding: 0.5rem 1.5rem;
+  background: #ffffff;
   color: #1a1a1a;
+  border-radius: 999px;          /* oval shape */
+  border: 1px solid #e8dccf;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-/* Membership dropdown */
+/* Membership dropdown - warmer color */
 .membership-dropdown {
   margin: 1.5rem auto;
   width: 18.75rem;
-  text-align: left;
+  text-align: center;
 }
 
 .membership-dropdown summary {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 0.5rem;
   width: 100%;
   min-height: 3.25rem;
   padding: 0.75rem 1.25rem;
-  background: #1a1a1a;
-  color: #ffffff;
-  border-radius: 0.5rem;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  color: #1a1a1a;
+  border-radius: 0.75rem;
   cursor: pointer;
   font-weight: 700;
   font-size: 1.05rem;
   list-style: none;
   box-sizing: border-box;
+  border: none;
 }
 
 .membership-dropdown summary::-webkit-details-marker {
@@ -36,7 +44,7 @@
 
 .membership-dropdown summary::after {
   content: "▼";
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   transition: transform 0.2s ease;
 }
 
@@ -54,3 +62,23 @@
 .membership-links .button {
   margin-bottom: 0;
 }
+
+/* Background image support */
+body {
+  background: linear-gradient(160deg, #f7efe6 0%, #f0e0d0 100%);
+  background-attachment: fixed;
+}
+
+/* Optional: use a background image (uncomment and set your image path) */
+/*
+body {
+  background: url('images/your-background.jpg') center/cover no-repeat fixed;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(247, 239, 230, 0.75); /* soft warm overlay */
+  z-index: -1;
+}
+*/
