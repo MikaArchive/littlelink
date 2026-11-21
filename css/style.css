@@ -5,86 +5,8 @@
 * http://www.opensource.org/licenses/mit-license.php
 */
 
-/* Base Typography Settings */
 :root {
 	font-size:16px;
-}
-
-/* Grid */
-.container {
-	position:relative;
-	width:100%;
-	max-width:37.5rem;
-    text-align:center;
-	margin:0 auto;
-	padding:3rem 1.25rem 0 1.25rem;
-	box-sizing:border-box;
-}
-.container-left {
-	position:relative;
-	width:100%;
-	max-width:37.5rem;
-	text-align:left;
-	margin:0 auto;
-	padding:0 1.25rem;
-	box-sizing:border-box;
-}
-.container-left p {
-	margin-bottom: 1rem;
-}
-.column {
-	position:center;
-	width:100%;
-	float:center;
-	box-sizing:border-box;
-}
-@media (min-width:25rem) {
-    .container {
-	width:85%;
-	padding-left:0;
-	padding-right:0;
-}
-}
-@media (min-width:34.375rem) {
-    .container {
-	width:80%;
-}
-.column,.columns {
-	margin-left:0;
-}
-.column:first-child,.columns:first-child {
-	margin-left:0;
-}
-}
-
-/* Base Styles */
-body {
-	margin:0;
-	padding:0;
-	background: linear-gradient(160deg, #f7efe6 0%, #f0e0d0 100%);
-	color:#1a1a1a;
-	font-family:"Open Sans",system-ui;
-	font-size:1.125rem;
-	font-weight:400;
-	line-height:1.6;
-}
-
-h1 {
-	margin:0 0 0.5rem 0;
-	font-size:3rem;
-    font-weight:800;
-	line-height:1;
-	letter-spacing:0;
-	word-wrap:break-word;
-	overflow-wrap:break-word;
-	hyphens:auto;
-}
-.container p {
-	margin:0 0 2rem 0;
-}
-
-:root {
-  font-size:16px;
   --scale-0:1rem;
   --scale-1:1.25rem;
   --scale-2:1.563rem;
@@ -99,16 +21,37 @@ h1 {
   --spacing-xxl:4rem;
 }
 
-.avatar {
-	width: 8rem;
-	height: 8rem;
-	border-radius: 50%;
-	object-fit: cover;
-	background-position: center;
-	margin-bottom: var(--spacing-l);
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
+.container {
+	position:relative;
+	width:100%;
+	max-width:37.5rem;
+    text-align:center;
+	margin:0 auto;
+	padding:3rem 1.25rem 0 1.25rem;
+	box-sizing:border-box;
+}
+
+.column {
+	width:100%;
+	box-sizing:border-box;
+}
+
+@media (min-width:25rem) {
+  .container { width:85%; padding-left:0; padding-right:0; }
+}
+@media (min-width:34.375rem) {
+  .container { width:80%; }
+}
+
+body {
+	margin:0;
+	padding:0;
+	background: linear-gradient(160deg, #f7efe6 0%, #f0e0d0 100%);
+	color:#1a1a1a;
+	font-family:"Open Sans",system-ui;
+	font-size:1.125rem;
+	font-weight:400;
+	line-height:1.6;
 }
 
 h1 {
@@ -117,46 +60,24 @@ h1 {
   	font-weight:800;
 	line-height:1.1;
 	letter-spacing:-0.02em;
-	word-wrap:break-word;
-	overflow-wrap:break-word;
-}
-body {
-	font-size:var(--scale-1);
-  	line-height:1.6;
 }
 .container p {
 	margin:0 0 var(--spacing-xl) 0;
 	font-size:var(--scale-1);
-	line-height:1.6;
 }
 
-.container {
-	padding:var(--spacing-xl) var(--spacing-m) 0 var(--spacing-m);
-	text-align:center;
+.avatar {
+	width: 8rem;
+	height: 8rem;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-bottom: var(--spacing-l);
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 }
 
-footer {
-	margin:var(--spacing-xxl) 0;
-    font-size:var(--scale-0);
-}
-
-@media (max-width:34.375rem) {
-  h1 { font-size:var(--scale-4); }
-  body { font-size:var(--scale-0); }
-  .container p { font-size:var(--scale-0); }
-  .avatar { margin-bottom:var(--spacing-m); }
-  footer { margin:var(--spacing-xl) 0; }
-}
-
-a {
-	color:#2457F5;
-	text-decoration:underline;
-}
-a:hover {
-	color:#083BDA;
-}
-
-.button,button {
+.button, button {
 	display:inline-flex;
 	align-items:center;
 	justify-content:center;
@@ -173,10 +94,8 @@ a:hover {
 	border-radius:0.5rem;
 	cursor:pointer;
 	box-sizing:border-box;
-	hyphens:auto;
   	margin-bottom:1rem;
 	text-align:center;
-	line-height:1.3;
 }
 
 .icon {
@@ -186,67 +105,34 @@ a:hover {
 	flex-shrink:0;
 }
 
-.avatar {
-	width: 8rem;
-	height: 8rem;
-	object-fit: cover;
-	background-position: center;
-	margin-bottom: var(--spacing-l);
-}
-.avatar--none { border-radius: 0%; }
-.avatar--rounded { border-radius: 50%; }
-.avatar--soft { border-radius: 0.5rem; }
-
-:root.theme-dark { color-scheme:dark; }
-:root.theme-dark :focus-visible {
-	overline: 2px solid #4899F7;
-	outline-offset: 2px;
-}
-:root.theme-dark body {
-	background-color:#121212;
-	color:#ffffff;
-}
-:root.theme-dark a:not(.button) { color:#4899F7; }
-:root.theme-dark a:not(.button):hover { color:#7AB8FF; }
-
-:root.theme-auto { color-scheme:light dark; }
-@media (prefers-color-scheme:dark) {
-	:root.theme-auto body {
-		background-color:#121212;
-		color:#ffffff;
-	}
-	:root.theme-auto :focus-visible {
-	    outline: 2px solid #4899F7;
-	    outline-offset: 2px;
-	}
-	:root.theme-auto a:not(.button) { color:#4899F7; }
-	:root.theme-auto a:not(.button):hover { color:#7AB8FF; }
+/* Social icons row */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin: 0.5rem 0 2rem 0;
 }
 
-.button:hover,button:hover { color:var(--button-text); }
-
-@media (max-width:34.375rem) {
-    h1 { font-size:2rem; }
-	body { font-size:1rem; }
-}
-
-/* Custom section titles - same size as membership button */
-.section-title {
-  display: inline-flex;
+.social-icon {
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 18.75rem;
-  min-height: 3.25rem;
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin: 2rem auto 1rem auto;
-  padding: 0.75rem 1.25rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
   background: #ffffff;
-  color: #1a1a1a;
-  border-radius: 0.75rem;
   border: 1px solid #e8dccf;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  box-sizing: border-box;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  transition: transform 0.15s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-2px);
+}
+
+.social-icon img {
+  width: 1.4rem;
+  height: 1.4rem;
 }
 
 /* Membership dropdown */
@@ -257,7 +143,7 @@ a:hover {
 }
 
 .membership-dropdown summary {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
@@ -294,6 +180,34 @@ a:hover {
   gap: 0.5rem;
 }
 
-.membership-links .button {
+/* Membership buttons: icon left, text centered */
+.membership-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  width: 100%;
   margin-bottom: 0;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.membership-btn .icon {
+  margin-right: 0;
+  flex-shrink: 0;
+}
+
+.membership-btn span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  pointer-events: none;
+}
+
+.button:hover, button:hover { color: var(--button-text); }
+
+@media (max-width:34.375rem) {
+  h1 { font-size:2rem; }
+  body { font-size:1rem; }
 }
